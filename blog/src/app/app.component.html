@@ -1,0 +1,26 @@
+<body>
+  <!-- <div class="masthead" style="background-image: url('../assets/smoke.jpg');"> -->
+
+  
+<div class="container">
+  <h1>Todo List</h1>
+  <div class="row">
+    <div class="col-12 ">
+      <input type="text" placeholder="Enter New Task" #task class="form-control">
+    </div>
+    <br>
+    <br>
+    <div class="col-12 mt-2">
+      <button (click)="addTask(task.value)" class="btn btn-primary">Add New Task</button>
+    </div>
+  </div>
+
+  <ul class="mt-3">
+    <li *ngFor="let item of list" class="d-flex justify-content-between">
+      {{ item.name }}
+      <button (click)="removeTask(item.id)" class="btn btn-danger">Remove Task</button>
+    </li>
+  </ul>
+</div>
+<!-- </div> -->
+</body>
